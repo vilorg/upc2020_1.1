@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import NameText from "./NameText";
+import Emoji from "./Emoji";
+import JinguLogo from "./JinguLogo";
+import Media from "react-media";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(){
+    const mstyles = {
+        div: {
+            paddingTop: '121px',
+            fontSize: '1.2rem'
+        }
+    }
+    const  styles = {
+        div: {
+
+        }
+    }
+    return(
+        <Media query={{ maxWidth: 450 }}>
+            {matches =>
+                matches ? (
+                    <div style={mstyles.div}>
+                        <JinguLogo/>
+                        <NameText/>
+                        <Emoji/>
+                    </div>
+                ) : (
+                    <div style={styles.div}>
+                        <NameText/>
+                        <JinguLogo/>
+                        <Emoji/>
+                    </div>
+                )
+            }
+        </Media>
+        )
 }
 
-export default App;
+export default App
