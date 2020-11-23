@@ -1,9 +1,30 @@
 .emoji_img {
     height: 205px;
     width:  205px;
+    position: relative;
+    animation: moving 3s infinite linear;
+}
+
+
+.parent {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items:center;
+    padding-bottom: 20%;
 }
 
 .emoji_img_m {
     height: 80px;
     width:  80px;
+    position: relative;
+    animation: moving 5s infinite linear;
+}
+
+@keyframes moving {
+    0%   {left:0%; transform: rotate(180deg)}
+    40%  {left:+80%; transform: rotate(390deg)}
+    50%  {left:+80%; transform: rotate(390deg)}
+    90% {left:0%; transform: rotate(180deg)}
+    100% {left:0%; transform: rotate(180deg)}
 }

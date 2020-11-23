@@ -18,13 +18,12 @@ function JinguLogo(){
         img: {
             borderRadius:'50%',
             width: '210px',
-            high: '210px',
-            display: 'block',
+            high: '210px'
         }
     }
 
     return(
-        <Media query={{ maxWidth: 450 }}>
+        <Media query={{ maxWidth: 540 }}>
             {matches =>
                 matches ? (
                     <img src="https://www.jingu.ru/sirius/jingu-logo-512.png" alt="logo" style={mstyles.img} />

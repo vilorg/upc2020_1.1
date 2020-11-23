@@ -7,17 +7,18 @@ import Media from "react-media";
 function App(){
     const mstyles = {
         div: {
-            paddingTop: '121px',
+            padding: '10%',
+            paddingTop: '20%',
             fontSize: '1.2rem'
         }
     }
     const  styles = {
         div: {
-
+            padding: '20%'
         }
     }
     return(
-        <Media query={{ maxWidth: 450 }}>
+        <Media query={{ maxWidth: 540 }}>
             {matches =>
                 matches ? (
                     <div style={mstyles.div}>
@@ -27,8 +28,10 @@ function App(){
                     </div>
                 ) : (
                     <div style={styles.div}>
-                        <NameText/>
-                        <JinguLogo/>
+                        <div className={'parent'}>
+                            <NameText/>
+                            <JinguLogo/>
+                        </div>
                         <Emoji/>
                     </div>
                 )
